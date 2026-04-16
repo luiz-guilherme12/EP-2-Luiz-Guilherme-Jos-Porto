@@ -6,6 +6,7 @@ def rolar_dados(n):
         valor=random.randint(1, 6)
         dados.append(valor)
     return dados
+
 #exercício 2
 def guardar_dado(rolados, estoque, guardar):
     lista=[]
@@ -19,6 +20,7 @@ def guardar_dado(rolados, estoque, guardar):
     lista.append(rol)
     lista.append(estoque)
     return lista
+
 #exercício 3
 def remover_dado(rolados, guardados, removido):
     rolados.append(guardados[removido])
@@ -31,3 +33,15 @@ def remover_dado(rolados, guardados, removido):
     lista.append(guard)
     return lista
 
+#exercício 4
+def calcula_pontos_regra_simples(lista):
+    dicionario={}
+    dicionario[1]=0
+    dicionario[2]=0
+    dicionario[3]=0
+    dicionario[4]=0
+    dicionario[5]=0
+    dicionario[6]=0
+    for i in lista:
+        dicionario[i]+=i
+    return dicionario

@@ -45,3 +45,10 @@ def calcula_pontos_regra_simples(lista):
     for i in lista:
         dicionario[i]+=i
     return dicionario
+
+#exercício 5
+def calcula_pontos_soma(lista):
+    soma=0
+    for i in lista:
+        soma+=i
+    return soma

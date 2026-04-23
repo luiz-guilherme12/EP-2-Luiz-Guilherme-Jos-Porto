@@ -1,5 +1,6 @@
 import random
 #exercício 1
+
 def rolar_dados(n):
     dados=[]
     for i in range(n):
@@ -8,6 +9,7 @@ def rolar_dados(n):
     return dados
 
 #exercício 2
+
 def guardar_dado(rolados, estoque, guardar):
     lista=[]
     rol=[]
@@ -22,6 +24,7 @@ def guardar_dado(rolados, estoque, guardar):
     return lista
 
 #exercício 3
+
 def remover_dado(rolados, guardados, removido):
     rolados.append(guardados[removido])
     guard=[]
@@ -34,6 +37,7 @@ def remover_dado(rolados, guardados, removido):
     return lista
 
 #exercício 4
+
 def calcula_pontos_regra_simples(lista):
     dicionario={}
     dicionario[1]=0
@@ -47,6 +51,7 @@ def calcula_pontos_regra_simples(lista):
     return dicionario
 
 #exercício 5
+
 def calcula_pontos_soma(lista):
     soma=0
     for i in lista:
@@ -54,6 +59,7 @@ def calcula_pontos_soma(lista):
     return soma
 
 #exercício 6
+
 def calcula_pontos_sequencia_baixa(lista):
     if 1 in lista and 2 in lista and 3 in lista and 4 in lista:
         return 15
@@ -65,6 +71,7 @@ def calcula_pontos_sequencia_baixa(lista):
         return 0  
     
 #exercício 7
+
 def calcula_pontos_sequencia_alta(lista):
     if 1 in lista and 2 in lista and 3 in lista and 4 in lista and 5 in lista:
         return 30
@@ -74,6 +81,7 @@ def calcula_pontos_sequencia_alta(lista):
         return 0
 
 #exercício 8
+
 def calcula_pontos_full_house(lista):
     dic={}
     x=0
@@ -101,6 +109,7 @@ def calcula_pontos_full_house(lista):
             return 0
     
 #exercício 9
+
 def calcula_pontos_quadra(dados):
     dic={}
     soma=0
@@ -113,4 +122,18 @@ def calcula_pontos_quadra(dados):
     for numero, quantidade in dic.items():
         if quantidade>=4:
             return soma
+    return 0
+
+#exercício 10
+
+def calcula_pontos_quina(dados):
+    dic={}
+    for i in dados:
+        if i in dic:
+            dic[i]+=1
+        else:
+            dic[i]=1
+    for numero, quantidade in dic.items():
+        if quantidade>=5:
+            return 50
     return 0

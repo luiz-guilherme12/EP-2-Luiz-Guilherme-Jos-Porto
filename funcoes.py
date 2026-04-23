@@ -99,3 +99,18 @@ def calcula_pontos_full_house(lista):
             return soma
         else:
             return 0
+    
+#exercício 9
+def calcula_pontos_quadra(dados):
+    dic={}
+    soma=0
+    for i in dados:
+        if i in dic:
+            dic[i]+=1
+        else:
+            dic[i]=1
+        soma+=i
+    for numero, quantidade in dic.items():
+        if quantidade>=4:
+            return soma
+    return 0

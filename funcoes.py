@@ -137,3 +137,15 @@ def calcula_pontos_quina(dados):
         if quantidade>=5:
             return 50
     return 0
+
+#exercício 11
+
+def calcula_pontos_regra_avancada(lista):
+    dicionario={}
+    dicionario['cinco_iguais'] = calcula_pontos_quina(lista)
+    dicionario['full_house'] = calcula_pontos_full_house(lista)
+    dicionario['quadra'] = calcula_pontos_quadra(lista)
+    dicionario['sem_combinacao'] = calcula_pontos_soma(lista)
+    dicionario['sequencia_alta'] = calcula_pontos_sequencia_alta(lista)
+    dicionario['sequencia_baixa'] = calcula_pontos_sequencia_baixa(lista)
+    return dicionario
